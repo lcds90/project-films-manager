@@ -68,6 +68,9 @@ Simula uma aplicação back-end com chamadas de API REST com métodos get/post/p
 
 #### ngx-infinite-scroll
 Biblioteca responsável pelo scroll infinito na listagem
+
+<hr>
+
 ### Angular Forms
 ```
 import {FormBuilder, FormGroup, Validators} from '@angular/forms'
@@ -96,10 +99,15 @@ O operador automaticamente realiza a verificação de existência da variável.
 ```
 <mat-error *ngIf="(cadastro.touched || cadastro.dirty) f.nota.errors?.required">Campo é obrigatório</mat-error>
 ```
+
+<hr>
+
 ### Models (Interface)
 Serve para padronização de dados para garantir a consistência dos mesmos, evitando divergência.
 > ? = Significa que o campo não é obrigatório, no caso em id, o responsável por esse processamento é o back-end, pois se não há obrigatoriedade de sempre estar passando o ID.
 Em interfaces os campos necessitam ser iguais, possui Case Sensitive
+
+<hr>
 
 ### Modal
 O modal para dados serem passados não necessita do @Input, pois nele se passam propriedades diferentes devido o construtor, sendo através do data.
