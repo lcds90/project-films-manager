@@ -1,4 +1,4 @@
-# Curso Intermediário de Angular - Digital Innovation One
+# Curso Intermediário de Angular - DIO - Listagem de Filmes
 
 ## :scroll: Sumário
 
@@ -31,27 +31,41 @@ O projeto consiste em um sistema de filmes, com a possibilidade de cadastros, ed
 ## :file_folder: Estrutura do projeto <a name = "structure"></a>
 
 ```
- ├── dio-project-poo
-    ├── class                    # Arquivos com classes do programa.
-    ├── enum                     # Arquivos com dados pré-definidos
-    ├── Program.cs               # Main de app
-    └── README.md
+ ├── src
+    ├── app                       # Pasta principal do programa.
+    ├── assets                    # Arquivos de assets que são distribuidos por toda aplicação
+    ├── environments              # Variaveis de ambiente
+    ├── index.html                # Arquivo index de inicialização, onde todo o app é abstraído
+    ├── main.ts                   # Arquivo geral de configuração da aplicação
+    └── tslint.json               # Definição de regras de desenvolvimento
+```
+<hr>
+```
+ ├── app
+    ├── core                      # Classes de serviços, onde possui regras de negócio definidas.
+    ├── filmes                    # Componentes de filmes: Cadastro/Listagem/Visualização
+    ├── shared                    # Componentes gerais para serem reutilizados e interfaces. 
+    ├── app.component.html        # Componente HTML principal do app
+    ├── app.component.ts          # Componente typescript principal do app
+    ├── app.module.ts             # Módulo principal do app
+    └── app.routing.module.ts     # Definição de rotas do app
 ```
 
 ## :memo: Conceitos aprendidos <a name = "learned"></a>
 
 ### Libs
 
-Utilização do Angular Material, lib RxJs e JSON-Server
-
 #### Angular Material
+É uma implementação do Material Design no Angular feita pela Google
 
 #### RxJs
+É uma biblioteca para uso em projetos que necessita ter programação reativa
 
 #### JSON-Server
+Simula uma aplicação back-end com chamadas de API REST com métodos get/post/put/delete
 
 #### ngx-infinite-scroll
-
+Biblioteca responsável pelo scroll infinito na listagem
 ### Angular Forms
 ```
 import {FormBuilder, FormGroup, Validators} from '@angular/forms'
