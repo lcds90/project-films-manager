@@ -25,7 +25,7 @@ O projeto consiste em um sistema de filmes, com a possibilidade de cadastros, ed
 </p>
 
 <p align="center">
-<img src="">
+<img src="https://raw.githubusercontent.com/lcds90/project-films-manager/development/src/assets/images/screenshot.png">
 </p>
 
 ## :file_folder: Estrutura do projeto <a name = "structure"></a>
@@ -39,7 +39,9 @@ O projeto consiste em um sistema de filmes, com a possibilidade de cadastros, ed
     ├── main.ts                   # Arquivo geral de configuração da aplicação
     └── tslint.json               # Definição de regras de desenvolvimento
 ```
+
 <hr>
+
 ```
  ├── app
     ├── core                      # Classes de serviços, onde possui regras de negócio definidas.
