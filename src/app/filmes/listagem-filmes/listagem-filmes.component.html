@@ -1,0 +1,47 @@
+<mat-toolbar class="app-title">Filmes Cadastrados</mat-toolbar>
+
+<mat-card class="float-left margin10 filter-list">
+  <form autocomplete="off" novalidate [formGroup]="filterList">
+    <div class="float-left width50">
+      <div class="padding10">
+      <dio-input-text titulo="Pesquisar termo" controlName="text" [formGroup]="filterList"></dio-input-text>
+      </div>      
+    </div>
+    <div class="float-left width50">
+    <div class="padding10">
+      <dio-input-select titulo="Gênero" [opcoes]="generos" controlName="genre" [formGroup]="filterList"></dio-input-select>
+    </div>
+    </div>
+  </form>
+</mat-card>
+
+<div class="home-content" infiniteScroll (scrolled)="onScroll()" *ngIf="films.length; else noData">
+  <mat-card class="home-card" *ngFor="let film of films">
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>{{film.titulo}}</mat-card-title>
+      <mat-card-subtitle>{{film.genero}}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      [src]="film.urlFoto || noPhoto"
+      [alt]="['Imagem do filme ',film.titulo]"
+    />
+    <mat-card-content>
+      <p class="quebrarlinha" [innerHTML]="film.descricao || 'Sem descrição informada'">
+        
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button color="accent" (click)="open(film.id)" mat-raised-button>
+        Ver Detalhes
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<ng-template #noData>
+  <div>
+
+  <h1 style="text-align: center;">Nenhum registro encontrado</h1>
+  </div>
+</ng-template>

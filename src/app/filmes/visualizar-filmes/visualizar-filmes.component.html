@@ -1,0 +1,29 @@
+<div *ngIf="film; else noData">
+  <mat-toolbar class="app-title">{{film.titulo}}</mat-toolbar>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="quebrarlinha"> {{film.descricao}}</mat-card-title>
+      <mat-card-subtitle>Gênero: {{film.genero}}</mat-card-subtitle>
+    </mat-card-header>
+   <mat-card-content>
+    <mat-list>
+      <img mat-card-lg-image [src]="film.urlFoto">
+      <mat-divider></mat-divider>
+      <mat-list-item>Data de Lançamento: {{film.dtLancamento | date: 'dd/MM/yyyy'}}</mat-list-item>
+      <mat-list-item>Nota: <a [href]="film.urlIMdb" target="_blank">{{film.nota}}</a></mat-list-item>
+    </mat-list>
+    
+   </mat-card-content>
+   <mat-card-actions>
+    <button (click)="edit()" color="accent" mat-raised-button>Editar</button>
+    <button (click)="delete()" color="warn" mat-raised-button>Excluir</button>
+   </mat-card-actions>
+  </mat-card>
+</div>
+<ng-template #noData>
+  <div>
+
+  <h1 style="text-align: center;">Nenhum registro encontrado</h1>
+  </div>
+</ng-template>

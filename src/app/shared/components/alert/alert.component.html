@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>{{alerta.titulo}}</h2>
+<mat-dialog-content class="mat-typography">
+ <p>{{alerta.descricao}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [color]="alerta.colorBtnSuccess" [mat-dialog-close]="true" cdkFocusInitial>{{alerta.btnSuccess}}</button>
+  <button mat-button [color]="alerta.colorBtnCancel" [mat-dialog-close]="false" *ngIf="alerta.haveClose" >{{alerta.btnCancel}}</button>
+</mat-dialog-actions>
